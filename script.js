@@ -3,91 +3,62 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.querySelector('.menu-toggle');
     const closeMenu = document.querySelector('.close-menu');
     const menuOverlay = document.querySelector('.menu-overlay');
-    const header = document.querySelector('header');
+    const header = document.querySelector('.site-header');
 
-    // Ouvrir le menu
-    menuToggle.addEventListener('click', () => {
+    // Fonction pour ouvrir le menu
+    const openMenu = () => {
         menuOverlay.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Empêcher le défilement
-    });
+        document.body.style.overflow = 'hidden';
+        menuToggle.setAttribute('aria-expanded', 'true');
+    };
 
-    // Fermer le menu
-    closeMenu.addEventListener('click', () => {
+    // Fonction pour fermer le menu
+    const closeMenuHandler = () => {
         menuOverlay.classList.remove('active');
-        document.body.style.overflow = ''; // Réactiver le défilement
-    });
+        document.body.style.overflow = '';
+        menuToggle.setAttribute('aria-expanded', 'false');
+    };
+
+    // Gestionnaires d'événements pour le menu
+    menuToggle.addEventListener('click', openMenu);
+    closeMenu.addEventListener('click', closeMenuHandler);
 
     // Fermer le menu avec la touche Escape
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && menuOverlay.classList.contains('active')) {
-            menuOverlay.classList.remove('active');
-            document.body.style.overflow = '';
+            closeMenuHandler();
         }
     });
 
     // Gestion des langues
-    const languageLinks = document.querySelectorAll('.languages a');
+    const languageLinks = document.querySelectorAll('.language-nav a');
     languageLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
-            // Retirer la classe active de tous les liens
             languageLinks.forEach(l => l.classList.remove('active'));
-            // Ajouter la classe active au lien cliqué
             link.classList.add('active');
-            // Ici, vous pouvez ajouter la logique pour changer la langue
         });
     });
 
     // Effet de scroll pour le header
+    let lastScroll = 0;
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll <= 0) {
+            header.classList.remove('scroll-up');
+            return;
         }
-    });
-
-    // Animation d'apparition au défilement
-    const animateOnScroll = () => {
-        const elements = document.querySelectorAll('.animate-on-scroll');
-        elements.forEach(element => {
-            const elementTop = element.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
-            if (elementTop < windowHeight - 100) {
-                element.classList.add('animated');
-            }
-        });
-    };
-
-    window.addEventListener('scroll', animateOnScroll);
-    animateOnScroll(); // Appel initial pour les éléments déjà visibles
-
-    // Slider de projets simple
-    const projectSlider = document.querySelector('.project-slider');
-    const slides = projectSlider.querySelectorAll('.project-slide');
-    let currentSlide = 0;
-
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            slide.style.display = i === index ? 'block' : 'none';
-        });
-    }
-
-    function nextSlide() {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
-    }
-
-    setInterval(nextSlide, 5000); // Change de slide toutes les 5 secondes
-    showSlide(currentSlide); // Affiche le premier slide
-
-    // Smooth scroll pour les liens d'ancrage
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
+        
+        if (currentScroll > lastScroll && !header.classList.contains('scroll-down')) {
+            // Scroll vers le bas
+            header.classList.remove('scroll-up');
+            header.classList.add('scroll-down');
+        } else if (currentScroll < lastScroll && header.classList.contains('scroll-down')) {
+            // Scroll vers le haut
+            header.classList.remove('scroll-down');
+            header.classList.add('scroll-up');
+        }
+        lastScroll = currentScroll;
     });
 });

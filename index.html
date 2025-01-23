@@ -3,205 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intuitis - Domotique et Smart Living Premium</title>
+    <title>Basalte - Design for your intelligent home</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <a href="#" class="logo">
-            Intuitis
-            <span>design for your intelligent home</span>
-        </a>
-        <button class="menu-toggle" aria-label="Menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </header>
+    <!-- Navigation -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <a href="/" class="brand">
+                basalte
+                <span>design for your intelligent home</span>
+            </a>
+            <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
+                <span class="hamburger">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </span>
+            </button>
+        </nav>
 
-    <div class="menu-overlay">
-        <button class="close-menu" aria-label="Fermer le menu"></button>
-        <div class="menu-content">
-            <!-- Left Side - Languages -->
-            <div class="left-side">
-                <ul class="languages">
-                    <li><a href="#" data-lang="de">DE</a></li>
-                    <li><a href="#" data-lang="en">EN</a></li>
-                    <li><a href="#" data-lang="es">ES</a></li>
-                    <li><a href="#" data-lang="fr">FR</a></li>
-                    <li><a href="#" data-lang="nl">NL</a></li>
-                </ul>
-            </div>
-
-            <!-- Right Side - Navigation -->
-            <div class="nav-content">
-                <ul class="nav-links">
-                    <li><a href="#">Intuitis Home</a></li>
-                    <li><a href="#produits">produits</a></li>
-                    <li><a href="#projets">réalisations</a></li>
-                    <li><a href="#a-propos">notre histoire</a></li>
-                    <li><a href="#contact">emplois</a></li>
-                    <li><a href="#contact">contact</a></li>
-                </ul>
-
-                <ul class="sub-links">
-                    <li><a href="#">explorez</a></li>
-                    <li><a href="#">showroom</a></li>
-                </ul>
-
-                <div class="social-icons">
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" aria-label="Vimeo"><i class="fab fa-vimeo-v"></i></a>
-                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
-                    <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <div class="menu-overlay">
+            <div class="menu-container">
+                <div class="menu-left">
+                    <nav class="language-nav">
+                        <ul>
+                            <li><a href="#" data-lang="de">DE</a></li>
+                            <li><a href="#" data-lang="en">EN</a></li>
+                            <li><a href="#" data-lang="es">ES</a></li>
+                            <li><a href="#" data-lang="fr" class="active">FR</a></li>
+                            <li><a href="#" data-lang="nl">NL</a></li>
+                        </ul>
+                    </nav>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <main>
-        <section id="hero">
-            <video autoplay loop muted playsinline>
-                <source src="path_to_your_video.mp4" type="video/mp4">
-            </video>
-            <div class="hero-content">
-                <h1>Votre Maison Intelligente</h1>
-                <p>Design et technologie pour un habitat luxueux</p>
-            </div>
-        </section>
-
-        <section id="produits">
-            <h2>Nos Produits</h2>
-            <div class="product-grid">
-                <div class="product-item">
-                    <img src="path_to_product_image1.jpg" alt="Produit 1">
-                    <h3>Interrupteurs Intelligents</h3>
-                </div>
-                <div class="product-item">
-                    <img src="path_to_product_image2.jpg" alt="Produit 2">
-                    <h3>Thermostats Connectés</h3>
-                </div>
-                <div class="product-item">
-                    <img src="path_to_product_image3.jpg" alt="Produit 3">
-                    <h3>Systèmes Audio</h3>
-                </div>
-            </div>
-        </section>
-
-        <section id="projets">
-            <h2>Nos Projets</h2>
-            <div class="project-slider">
-                <div class="project-slide">
-                    <img src="path_to_project_image1.jpg" alt="Projet 1">
-                    <div class="project-info">
-                        <h3>Résidence de Luxe à Paris</h3>
-                        <p>Une maison intelligente au cœur de la capitale</p>
+                
+                <div class="menu-right">
+                    <button class="close-menu" aria-label="Fermer le menu">
+                        <span class="close-icon"></span>
+                    </button>
+                    
+                    <nav class="main-menu">
+                        <ul class="primary-nav">
+                            <li><a href="#">Basalte Home</a></li>
+                            <li><a href="#">produits</a></li>
+                            <li><a href="#">réalisations</a></li>
+                            <li><a href="#">notre histoire</a></li>
+                            <li><a href="#">emplois</a></li>
+                            <li><a href="#">contact</a></li>
+                        </ul>
+                        
+                        <ul class="secondary-nav">
+                            <li><a href="#">explorez</a></li>
+                            <li><a href="#">showroom</a></li>
+                        </ul>
+                    </nav>
+                    
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </header>
 
-        <section id="a-propos">
-            <h2>À Propos de Nous</h2>
-            <p>Nous sommes spécialisés dans la création d'espaces de vie intelligents et luxueux, alliant technologie de pointe et design élégant.</p>
-        </section>
-
-        <section id="contact">
-            <h2>Contactez-nous</h2>
-            <form>
-                <input type="text" placeholder="Nom" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Message" required></textarea>
-                <button type="submit">Envoyer</button>
-            </form>
-        </section>
+    <!-- Contenu principal -->
+    <main>
+        <!-- Votre contenu ici -->
     </main>
 
-    <footer>
-        <!-- Update the footer section in your index.html -->
-<footer class="site-footer">
-    <div class="footer-content">
-        <!-- Left Column -->
-        <div class="footer-company">
-            <a href="/" class="footer-logo">basalte</a>
-            <address>
-                fraterstraat 37b<br>
-                9820 merelbeke, belgique
-            </address>
-            <div class="contact-info">
-                <a href="tel:+3293857838">+32 9 385 78 38</a>
-                <a href="mailto:info@basalte.be">info@basalte.be</a>
+    <!-- Footer (conservé tel que validé) -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <!-- Left Column -->
+            <div class="footer-company">
+                <a href="/" class="footer-logo">basalte</a>
+                <address>
+                    fraterstraat 37b<br>
+                    9820 merelbeke, belgique
+                </address>
+                <div class="contact-info">
+                    <a href="tel:+3293857838">+32 9 385 78 38</a>
+                    <a href="mailto:info@basalte.be">info@basalte.be</a>
+                </div>
+            </div>
+
+            <!-- Products Column -->
+            <div class="footer-section">
+                <h3>produits</h3>
+                <ul>
+                    <li><a href="#">commandes</a></li>
+                    <li><a href="#">interphones</a></li>
+                    <li><a href="#">musique</a></li>
+                    <li><a href="#">supports iPad</a></li>
+                    <li><a href="#">prises et lumières</a></li>
+                    <li><a href="#">détecteurs de mouvement</a></li>
+                    <li><a href="#">serveurs Core</a></li>
+                </ul>
+            </div>
+
+            <!-- Basalte Home Column -->
+            <div class="footer-section">
+                <h3>Basalte Home</h3>
+                <ul>
+                    <li><a href="#">lumières et stores</a></li>
+                    <li><a href="#">climat</a></li>
+                    <li><a href="#">musique</a></li>
+                    <li><a href="#">sécurité</a></li>
+                </ul>
+            </div>
+
+            <!-- Navigation Column -->
+            <div class="footer-section">
+                <ul>
+                    <li><a href="#">basalte home</a></li>
+                    <li><a href="#">produits</a></li>
+                    <li><a href="#">explorez</a></li>
+                    <li><a href="#">notre histoire</a></li>
+                    <li><a href="#">emplois</a></li>
+                    <li><a href="#">réalisations</a></li>
+                    <li><a href="#">contact</a></li>
+                    <li><a href="#">support</a></li>
+                    <li><a href="#" class="basalte-world">basalte <span>| world</span></a></li>
+                </ul>
+            </div>
+
+            <!-- Social Media Column -->
+            <div class="footer-social">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Vimeo"><i class="fab fa-vimeo-v"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
 
-        <!-- Products Column -->
-        <div class="footer-section">
-            <h3>produits</h3>
-            <ul>
-                <li><a href="#">commandes</a></li>
-                <li><a href="#">interphones</a></li>
-                <li><a href="#">musique</a></li>
-                <li><a href="#">supports iPad</a></li>
-                <li><a href="#">prises et lumières</a></li>
-                <li><a href="#">détecteurs de mouvement</a></li>
-                <li><a href="#">serveurs Core</a></li>
-            </ul>
+        <div class="footer-bottom">
+            <div class="footer-legal">
+                <p>fabriqué à la main avec <i class="fas fa-heart"></i> en Belgique</p>
+                <p>©2025 Basalte bv - BE 0896.833.789 - <a href="#">politique de confidentialité</a> - <a href="#">cookies</a> - <a href="#">conditions générales</a></p>
+            </div>
+            <div class="footer-credits">
+                <p>Site web créé par <a href="#">eekliris.be</a></p>
+            </div>
         </div>
-
-        <!-- Basalte Home Column -->
-        <div class="footer-section">
-            <h3>Basalte Home</h3>
-            <ul>
-                <li><a href="#">lumières et stores</a></li>
-                <li><a href="#">climat</a></li>
-                <li><a href="#">musique</a></li>
-                <li><a href="#">sécurité</a></li>
-            </ul>
-        </div>
-
-        <!-- Navigation Column -->
-        <div class="footer-section">
-            <ul>
-                <li><a href="#">basalte home</a></li>
-                <li><a href="#">produits</a></li>
-                <li><a href="#">explorez</a></li>
-                <li><a href="#">notre histoire</a></li>
-                <li><a href="#">emplois</a></li>
-                <li><a href="#">réalisations</a></li>
-                <li><a href="#">contact</a></li>
-                <li><a href="#">support</a></li>
-                <li><a href="#" class="basalte-world">basalte <span>| world</span></a></li>
-            </ul>
-        </div>
-
-        <!-- Social Media Column -->
-        <div class="footer-social">
-            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" aria-label="Vimeo"><i class="fab fa-vimeo-v"></i></a>
-            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-            <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
-            <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
-        </div>
-    </div>
-
-    <div class="footer-bottom">
-        <div class="footer-legal">
-            <p>fabriqué à la main avec <i class="fas fa-heart"></i> en Belgique</p>
-            <p>©2025 Basalte bv - BE 0896.833.789 - <a href="#">politique de confidentialité</a> - <a href="#">cookies</a> - <a href="#">conditions générales</a></p>
-        </div>
-        <div class="footer-credits">
-            <p>Site web créé par <a href="#">eekliris.be</a></p>
-        </div>
-    </div>
-</footer>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
